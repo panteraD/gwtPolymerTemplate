@@ -74,6 +74,15 @@
                     <webXml>src\main\webapp\WEB-INF\web.xml</webXml>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.1.0.Alpha5</version>
+                <configuration>
+                    <filename>gwtPolymerTemplate.war</filename>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

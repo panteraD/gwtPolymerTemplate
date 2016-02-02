@@ -12,11 +12,11 @@
 
 
     <g:HTMLPanel>
-        <p:PaperIconItem ui:field="menuClearAll">
-            <i:IronIcon icon="delete"/>
-            <div>Clear All</div>
-            <p:PaperRipple/>
-        </p:PaperIconItem>
+        <!--<p:PaperIconItem ui:field="menuClearAll">-->
+            <!--<i:IronIcon icon="delete"/>-->
+            <!--<div>Clear All</div>-->
+            <!--<p:PaperRipple/>-->
+        <!--</p:PaperIconItem>-->
         <p:PaperIconItem ui:field="menuClearDone">
             <i:IronIcon icon="clear"/>
             <div>Clear Done</div>
