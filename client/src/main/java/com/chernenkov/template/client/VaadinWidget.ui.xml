@@ -91,7 +91,7 @@
             </div>
             <div class="buttons">
                 <p:PaperButton attributes="dialog-dismiss">Cancel</p:PaperButton>
-                <p:PaperButton ui:field="confirmAddbutton"
+                <p:PaperButton ui:field="confirmAddButton"
                                attributes="dialog-confirm">OK</p:PaperButton>
             </div>
         </p:PaperDialog>

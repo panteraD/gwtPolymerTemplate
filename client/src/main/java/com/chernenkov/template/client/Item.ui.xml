@@ -13,16 +13,20 @@
             font-size: 150%;
             font-weight: normal;
         }
+        .description {
+            text-decoration: solid;
+        }
     </ui:style>
     <g:HTMLPanel
             addStyleNames="vertical center-justified layout {style.item}">
-        <!--wtf?-->
-        <style></style>
-        <div class="vertical-selection">
+        <style>
+        </style>
+        <div class="vertical-section">
             <h4>
                 <p:PaperCheckbox ui:field="done"></p:PaperCheckbox>
+                <span ui:field="title" class='{style.title}'>Go to Google</span>
             </h4>
-            <div ui:field="descrtiption" class="{style.description}"></div>
+            <div ui:field="description" class='{style.description}'></div>
         </div>
-        </g:HTMLPanel>
-    </ui:UiBinder>
+    </g:HTMLPanel>
+</ui:UiBinder>
