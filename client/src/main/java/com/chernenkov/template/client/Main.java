@@ -18,19 +18,25 @@ public class Main implements EntryPoint {
                 "iron-icons/iron-icons.html",
                 PaperIconItemElement.SRC,
                 PaperRippleElement.SRC,
+                IronIconElement.SRC,
                 PaperDrawerPanelElement.SRC,
                 PaperHeaderPanelElement.SRC,
                 PaperToolbarElement.SRC,
                 PaperFabElement.SRC,
-                IronIconElement.SRC), new Function() {
-            public Object call(Object o) {
+                PaperDialogElement.SRC,
+                PaperTextareaElement.SRC,
+                PaperInputElement.SRC,
+                PaperButtonElement.SRC,
+                PaperCheckboxElement.SRC
+        ), new Function() {
+            public Object call(Object arg) {
                 startApp();
                 return null;
             }
         });
 
-
     }
+
 
     public void startApp(){
         RootPanel.get().add(new VaadinWidget());

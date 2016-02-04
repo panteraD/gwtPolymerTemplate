@@ -64,5 +64,20 @@
                 <paper-fab ui:field="addButton" icon="add" title="add" class="add"/>
             </div>
         </paper-drawer-panel>
+        <paper-dialog ui:field="addItemDialog"
+                      entry-animation="fade-in-animation"
+                      class="dialog" modal="">
+            <h2>Add Item</h2>
+            <paper-input ui:field="titleInput" label="Title" required=""
+                         auto-validate="" error-message="required input!"/>
+            <div class="textarea-container iron-autogrow-textarea">
+                <paper-textarea ui:field="descriptionInput" label="Notes"/>
+            </div>
+            <div class="buttons">
+                <paper-button dialog-dismiss="">Cancel</paper-button>
+                <paper-button ui:field="confirmAddButton"
+                              dialog-confirm="">OK</paper-button>
+            </div>
+        </paper-dialog>
     </g:HTMLPanel>
 </ui:UiBinder>
