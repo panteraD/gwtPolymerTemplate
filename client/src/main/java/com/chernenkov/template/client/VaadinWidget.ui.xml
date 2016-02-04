@@ -21,6 +21,10 @@
             padding: 15px;
         }
 
+        .dialog {
+            min-width: 40%;
+        }
+
 
     </ui:style>
 
@@ -76,6 +80,21 @@
                 <p:PaperFab ui:field="addButton" icon="add" addStyleNames="add"/>
             </div>
         </p:PaperDrawerPanel>
+
+        <p:PaperDialog ui:field="addItemDialog" entryAnimation="fade-in-anumation"
+                       addStyleNames="{style.dialog}" modal="true">
+            <h2>Add Item</h2>
+            <p:PaperInput ui:field="titleInput" label="Title" required="true"
+                          autoValidate="true" errorMessage="required input!"/>
+            <div class="textarea-container iron-autogrow-textarea">
+                <p:PaperTextarea ui:field="descriptionInput" label="Notes"/>
+            </div>
+            <div class="buttons">
+                <p:PaperButton attributes="dialog-dismiss">Cancel</p:PaperButton>
+                <p:PaperButton ui:field="confirmAddbutton"
+                               attributes="dialog-confirm">OK</p:PaperButton>
+            </div>
+        </p:PaperDialog>
     </g:HTMLPanel>
 
 </ui:UiBinder>
