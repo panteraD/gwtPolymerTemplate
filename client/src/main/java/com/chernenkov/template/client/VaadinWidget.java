@@ -14,7 +14,8 @@ public class VaadinWidget extends Composite {
 
     public VaadinWidget(){
         initWidget(ourMainUiBinder.createAndBindUi(this));
-
     }
+
+
 
 }

@@ -1,37 +1,68 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
-             xmlns:g='urn:import:com.google.gwt.user.client.ui'
-             xmlns:p='urn:import:com.vaadin.polymer.paper.widget'
-             xmlns:i='urn:import:com.vaadin.polymer.iron.widget'>
-
-    <ui:style>
-        paper-icon-item {
-            position: relative;
-            overflow: hidden;
-        }
-    </ui:style>
-
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
 
     <g:HTMLPanel>
-        <!--<p:PaperIconItem ui:field="menuClearAll">-->
-            <!--<i:IronIcon icon="delete"/>-->
-            <!--<div>Clear All</div>-->
-            <!--<p:PaperRipple/>-->
-        <!--</p:PaperIconItem>-->
-        <p:PaperIconItem ui:field="menuClearDone">
-            <i:IronIcon icon="clear"/>
-            <div>Clear Done</div>
-            <p:PaperRipple/>
-        </p:PaperIconItem>
-        <p:PaperIconItem ui:field="menuSettings">
-            <i:IronIcon icon="settings"/>
-            <div>Settings</div>
-            <p:PaperRipple/>
-        </p:PaperIconItem>
-        <p:PaperIconItem ui:field="menuAbout">
-            <i:IronIcon icon="help"/>
-            <div>About</div>
-            <p:PaperRipple/>
-        </p:PaperIconItem>
-    </g:HTMLPanel>
+        <style is='custom-style'>
+            paper-icon-item {
+            position: relative;
+            overflow: hidden;
+            }
+            .toolbar {
+            background: #4285f4 !important;
+            }
+            .header {
+            font-size: 200%;
+            margin-left: 50px;
+            background: #4285f4 !important;
+            }
+            .content {
+            padding: 15px;
+            }
+            .add {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            --paper-fab-background: var(--paper-red-500);
+            }
 
+        </style>
+        <paper-drawer-panel ui:field="drawerPanel">
+            <div drawer="">
+                <paper-header-panel mode="seamed">
+                    <paper-toolbar/>
+                    <paper-icon-item ui:field="menuClearAll">
+                        <iron-icon icon="delete"/>
+                        <div>Clear All</div>
+                        <paper-ripple/>
+                    </paper-icon-item>
+                    <paper-icon-item ui:field="menuClearDone">
+                        <iron-icon icon="clear"/>
+                        <div>Clear Done</div>
+                        <paper-ripple/>
+                    </paper-icon-item>
+                    <paper-icon-item ui:field="menuSettings">
+                        <iron-icon icon="settings"/>
+                        <div>Settings</div>
+                        <paper-ripple/>
+                    </paper-icon-item>
+                    <paper-icon-item ui:field="menuAbout">
+                        <iron-icon icon="help"/>
+                        <div>About</div>
+                        <paper-ripple/>
+                    </paper-icon-item>
+                </paper-header-panel>
+            </div>
+            <div main="">
+                <paper-header-panel mode="seamed">
+                    <paper-toolbar>
+                        <paper-icon-button ui:field="menu" icon="more-vert" paper-drawer-toggle=""/>
+                        <span>Todo List</span>
+                    </paper-toolbar>
+                    <div ui:field="content" class="content vertical center-justified layout"/>
+
+                </paper-header-panel>
+                <paper-fab ui:field="addButton" icon="add" title="add" class="add"/>
+            </div>
+        </paper-drawer-panel>
+    </g:HTMLPanel>
 </ui:UiBinder>
