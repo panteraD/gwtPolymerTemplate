@@ -27,7 +27,7 @@ public class Item extends Composite {
     @UiHandler("done")
     protected void change(IronChangeEvent ev) {
         if (done.getActive()) {
-            title.addClassName("done");
+            title.addClassName("done"); //crosses title with line via css style
         } else {
             title.removeClassName("done");
         }

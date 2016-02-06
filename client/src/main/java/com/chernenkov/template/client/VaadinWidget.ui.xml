@@ -30,6 +30,7 @@
 
 
     <g:HTMLPanel>
+        <!--Tip: In order to make Polymer process your style block add the is="custom-style" attribute.-->
         <style is='custom-style'>
             .add {
             position: absolute;
@@ -39,10 +40,14 @@
             }
         </style>
 
+        <!--this type of panel contains a drawer panel and main panel-->
         <p:PaperDrawerPanel ui:field="drawerPanel">
 
             <div drawer="">
+                <!--container with witch provides scroll-->
                 <p:PaperHeaderPanel mode="seamed">
+
+                    <!--paper-toolbar is a horizontal bar containing items that can be used for label, navigation, search and actions-->
                     <p:PaperToolbar/>
                     <p:PaperIconItem ui:field="menuClearAll">
                         <i:IronIcon icon="delete"/>
@@ -69,6 +74,7 @@
             <div main="">
                 <p:PaperHeaderPanel mode="seamed">
                     <p:PaperToolbar addStyleNames="{style.toolbar}">
+                        <!--attributes and icon do nothing-->
                         <p:PaperIconButton ui:field="menu" icon="more-vert"
                                            attributes="paper-drawer-toggle"/>
                         <span class="{style.header}">Todo List</span>
@@ -81,11 +87,12 @@
             </div>
         </p:PaperDrawerPanel>
 
-        <p:PaperDialog ui:field="addItemDialog" entryAnimation="fade-in-anumation"
+        <p:PaperDialog ui:field="addItemDialog" entryAnimation="fade-in-animation"
                        addStyleNames="{style.dialog}" modal="true">
             <h2>Add Item</h2>
             <p:PaperInput ui:field="titleInput" label="Title" required="true"
                           autoValidate="true" errorMessage="required input!"/>
+            <!--this dont work how it is intended lol-->
             <div class="textarea-container iron-autogrow-textarea">
                 <p:PaperTextarea ui:field="descriptionInput" label="Notes"/>
             </div>
